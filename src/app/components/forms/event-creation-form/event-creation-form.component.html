@@ -1,0 +1,30 @@
+<h1>Please enter the Event details below:</h1>
+
+<body>
+
+<div class="container">
+    <form (ngSubmit)="submitEvent()" #eventForm="ngForm" class="eventForm">
+
+        <div class="formgroup">
+            <label for="name">Name</label>
+            <br>
+            <input type="text"id="name" required [(ngModel)]="model.name" name = "name">
+      </div>
+        <div class="formgroup">
+          <label for="location">Location</label>
+          <br>
+          <input type="text" id="location"required [(ngModel)]="model.location" (keydown.enter)="$event.preventDefault()" placeholder="" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" name="location" #search>
+        </div>
+      <div class="formgroup">
+            <label for="name">Genre</label>
+            <br>
+            <input type="text"id="genre" required [(ngModel)]="model.genre" name = "genre">
+      </div>
+        
+          
+        <div class="buttoncontainer">
+        <button type="submit" class="button">Create Event</button>
+        </div>
+    </form> 
+  </div>
+</body>

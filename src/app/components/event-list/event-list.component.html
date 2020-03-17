@@ -1,0 +1,19 @@
+<body>
+    Please see local event listings below:
+</body>
+
+<table>
+        <tr>
+          <th>Name:</th>
+          <th>Location:</th>
+          <th>Genre:</th>
+          <th></th>
+        </tr>
+        <tr class= "eventListRow" *ngFor="let event of events" >
+            <td> {{event.name}} </td>
+            <td> {{event.location}} </td>
+            <td> {{event.genre}}</td>
+
+            <button (click)="eventInfo()">More Info</button> 
+        </tr>
+</table>    

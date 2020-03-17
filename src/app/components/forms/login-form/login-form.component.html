@@ -1,0 +1,21 @@
+<body>
+
+    <div class="container">
+        <form (ngSubmit)="submitEvent()" #eventForm="ngForm" class="eventForm">
+    
+            <div class="formgroup">
+                <label for="email">E-mail</label>
+                <br>
+                <input type="text"id="email" required [(ngModel)]="model.email" name = "email">
+          </div>
+            <div class="formgroup">
+              <label for="password">Password</label>
+              <br>
+              <input type="text" id="password"required [(ngModel)]="model.password" name="password">
+            </div>
+            <div class="buttoncontainer">
+            <button type="submit" class="button">Create Account</button>
+            </div>
+        </form> 
+      </div>
+    </body>
