@@ -6,6 +6,7 @@ import { EventInfoComponent } from './components/event-info/event-info.component
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
+  { path: '/', pathMatch: 'full',redirectTo: 'login'},
   { path: '', pathMatch: 'full',redirectTo: 'login'},
   { path: 'login', component: LoginComponent},
   { path: 'allevents', component: EventListComponent },
