@@ -10,9 +10,6 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { AgmCoreModule } from '@agm/core';
 import { EventInfoComponent } from './components/event-info/event-info.component';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginComponent } from './components/login/login.component';
-import { LoginFormComponent } from './components/forms/login-form/login-form.component';
-
 
 @NgModule({
   declarations: [
@@ -20,9 +17,7 @@ import { LoginFormComponent } from './components/forms/login-form/login-form.com
     EventListComponent,
     CreateEventComponent,
     EventCreationFormComponent,
-    EventInfoComponent,
-    LoginComponent,
-    LoginFormComponent
+    EventInfoComponent
   ],
   imports: [
     BrowserModule,
