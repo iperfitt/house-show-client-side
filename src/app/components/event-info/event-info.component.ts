@@ -9,6 +9,9 @@ export class EventInfoComponent implements OnInit {
 
   constructor() { }
 
+  public address : string;
+  public latitude : string;
+  public longitude : string;
   ngOnInit() {
   }
 

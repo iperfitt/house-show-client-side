@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   private cookieValue: string;  
 
-  private title = "DIY Event App"
+  public title = "DIY Event App"
 
   constructor(private cookieService: CookieService) {
     // this.oauthService.redirectUri = window.location.origin;

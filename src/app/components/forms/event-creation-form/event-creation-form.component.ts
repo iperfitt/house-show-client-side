@@ -26,7 +26,7 @@ export class EventCreationFormComponent implements OnInit {
   zoom:number;
   address: string;
 
-  @ViewChild('search', null)
+  @ViewChild('search')
   public searchElementRef: ElementRef;
 
   autocomplete() {
