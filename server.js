@@ -1,5 +1,6 @@
 // server.js
-import express, { static } from 'express';
+import express from 'express';
+
 const app = express();
 const path = require('path');
 // Run the app by serving the static files
