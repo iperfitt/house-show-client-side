@@ -10,7 +10,7 @@ export class EventService {
   constructor( private http: HttpClient ) { }
 
   getAllEvents() {
-    return this.http.get(`/allevents`);
+    return this.http.get(`https://house-show-server-side.herokuapp.com/allevents`);
   }
 
   submitEvent(event : Event) {
