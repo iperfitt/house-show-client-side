@@ -16,6 +16,6 @@ export class EventService {
   submitEvent(event : Event) {
     let headers = new HttpHeaders({'Content-Type': 'application/json'});
     let options = { headers: headers };
-    return this.http.post(`/createevent`,event, options);
+    return this.http.post(`https://house-show-server-side.herokuapp.com/createevent`,event, options);
   }
 }
