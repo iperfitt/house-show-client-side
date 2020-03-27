@@ -5,7 +5,6 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { EventInfoComponent } from './components/event-info/event-info.component';
 
 const routes: Routes = [
-  { path: '/', pathMatch: 'full',redirectTo: 'allevents'},
   { path: '', pathMatch: 'full',redirectTo: 'allevents'},
   { path: 'allevents', component: EventListComponent },
   { path: 'createevent', component: CreateEventComponent },
