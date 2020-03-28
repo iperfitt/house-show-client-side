@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Event } from 'src/app/models/event';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +10,8 @@ import { Event } from 'src/app/models/event';
 export class EventService {
 
   constructor( private http: HttpClient ) { }
+
+  baseUrl = environment.baseUrl;
 
   getAllEvents() {
     return this.http.get(`https://house-show-server-side.herokuapp.com/allevents`);
