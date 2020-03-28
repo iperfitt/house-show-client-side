@@ -7,7 +7,6 @@ import { EventListComponent } from './components/event-list/event-list.component
 import { AppRoutingModule } from './app-routing.module';
 import { EventCreationFormComponent } from './components/forms/event-creation-form/event-creation-form.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
-import { AgmCoreModule } from '@agm/core';
 import { EventInfoComponent } from './components/event-info/event-info.component';
 import { CookieService } from 'ngx-cookie-service';
 
@@ -23,10 +22,7 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
-    AgmCoreModule.forRoot({
-      libraries: ['places']
-    })
+    FormsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent, ]
