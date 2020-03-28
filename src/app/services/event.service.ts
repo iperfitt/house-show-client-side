@@ -14,12 +14,12 @@ export class EventService {
   baseUrl = environment.baseUrl;
 
   getAllEvents() {
-    return this.http.get(`https://house-show-server-side.herokuapp.com/allevents`);
+    return this.http.get(this.baseUrl + '/allevents');
   }
 
   submitEvent(event : Event) {
     let headers = new HttpHeaders({'Content-Type': 'application/json'});
     let options = { headers: headers };
-    return this.http.post(`https://house-show-server-side.herokuapp.com/createevent`,event, options);
+    return this.http.post(this.baseUrl + '/createevent',event, options);
   }
 }
