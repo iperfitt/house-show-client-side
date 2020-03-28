@@ -14,6 +14,7 @@ export class EventService {
   baseUrl = environment.baseUrl;
 
   getAllEvents() {
+    console.log(this.baseUrl);
     return this.http.get(this.baseUrl + '/allevents');
   }
 
