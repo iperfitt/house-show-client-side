@@ -9,6 +9,7 @@ import { EventCreationFormComponent } from './components/forms/event-creation-fo
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { EventInfoComponent } from './components/event-info/event-info.component';
 import { CookieService } from 'ngx-cookie-service';
+import { GooglePlacesComponent } from './components/google-places/google-places.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CookieService } from 'ngx-cookie-service';
     EventListComponent,
     CreateEventComponent,
     EventCreationFormComponent,
-    EventInfoComponent
+    EventInfoComponent,
+    GooglePlacesComponent
   ],
   imports: [
     BrowserModule,
