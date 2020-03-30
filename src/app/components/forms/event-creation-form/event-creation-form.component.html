@@ -11,9 +11,8 @@
             <input type="text"id="name" required [(ngModel)]="model.name" name = "name">
       </div>
         <div class="formgroup">
-          <label for="location">Location</label>
           <br>
-          <input type="text" id="location"required [(ngModel)]="model.location" (keydown.enter)="$event.preventDefault()" placeholder="" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" name="location" #search>
+          <app-google-places (setAddress)="getAddress($event)" adressType="geocode"></app-google-places>
         </div>
       <div class="formgroup">
             <label for="name">Genre</label>
@@ -28,5 +27,3 @@
     </form> 
   </div>
 </body>
-
-<app-google-places (setAddress)="getAddress($event)" adressType="geocode"></app-google-places>

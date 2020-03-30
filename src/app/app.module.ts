@@ -10,6 +10,7 @@ import { CreateEventComponent } from './components/create-event/create-event.com
 import { EventInfoComponent } from './components/event-info/event-info.component';
 import { CookieService } from 'ngx-cookie-service';
 import { GooglePlacesComponent } from './components/google-places/google-places.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,11 @@ import { GooglePlacesComponent } from './components/google-places/google-places.
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCbmhPp8vxHPCaB4nubu2M4EDqEZ2A-2vk',
+      libraries: ['places']
+    })
   ],
   providers: [CookieService],
   bootstrap: [AppComponent, ]
