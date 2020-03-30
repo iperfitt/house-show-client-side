@@ -12,10 +12,10 @@
       </div>
         <div class="formgroup">
           <br>
-          <app-google-places (setAddress)="getAddress($event)" adressType="geocode"></app-google-places>
+          <app-google-places (setAddress)="getAddress($event)" adressType="geocode" [address] = "model.location" name = "location"></app-google-places>
         </div>
       <div class="formgroup">
-            <label for="name">Genre</label>
+            <label for="genre">Genre</label>
             <br>
             <input type="text"id="genre" required [(ngModel)]="model.genre" name = "genre">
       </div>
