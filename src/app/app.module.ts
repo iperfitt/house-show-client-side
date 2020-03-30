@@ -11,6 +11,7 @@ import { EventInfoComponent } from './components/event-info/event-info.component
 import { CookieService } from 'ngx-cookie-service';
 import { GooglePlacesComponent } from './components/google-places/google-places.component';
 import { AgmCoreModule } from '@agm/core';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AgmCoreModule } from '@agm/core';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    GooglePlaceModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCbmhPp8vxHPCaB4nubu2M4EDqEZ2A-2vk',
       libraries: ['places']

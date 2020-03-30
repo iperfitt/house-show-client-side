@@ -19,5 +19,11 @@ export class EventCreationFormComponent {
     this.eventService.submitEvent(this.model).subscribe(
     (val: any) => console.log(val)); 
   }
+
+  getOutputVal(selected: string) {
+    if(selected) {
+      this.model.location = selected;
+    }
+  }
   
 }
