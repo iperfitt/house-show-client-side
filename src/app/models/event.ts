@@ -1,9 +1,11 @@
+import { EventAddress } from './eventaddress';
+
 export class Event {
 
     constructor(
-        public id: number,
-        public name: string,
-        public location: string,
-        public genre: string
+        public eventId: number,
+        public eventName: string,
+        public eventAddress: EventAddress,
+        public eventGenre: string
       ) {  }
 }

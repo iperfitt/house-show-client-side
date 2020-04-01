@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Event } from 'src/app/models/event';
 import { EventService } from 'src/app/services/event.service';
+import { Address } from 'ngx-google-places-autocomplete/objects/address';
+import { EventAddress } from 'src/app/models/eventaddress';
 
 
 @Component({
@@ -10,7 +12,7 @@ import { EventService } from 'src/app/services/event.service';
 })
 export class EventCreationFormComponent {
 
-  model = new Event(0,"", "", "")
+  model = new Event(0,"", null, "")
 
   constructor(private eventService: EventService) { }
 
@@ -22,7 +24,9 @@ export class EventCreationFormComponent {
 
   getOutputVal(selected: string) {
     if(selected) {
-      this.model.location = selected;
+      let address = new EventAddress(0,'','','','','','');
+      this.model.eventAddress = address;
+
     }
   }
   

@@ -10,9 +10,9 @@
           <th></th>
         </tr>
         <tr class= "eventListRow" *ngFor="let event of events" >
-            <td> {{event.name}} </td>
-            <td> {{event.location}} </td>
-            <td> {{event.genre}}</td>
+            <td> {{event.eventName}} </td>
+            <td> {{event.eventAddress.city}} </td>
+            <td> {{event.eventGenre}}</td>
 
             <button (click)="eventInfo()">More Info</button> 
         </tr>
