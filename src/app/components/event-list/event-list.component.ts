@@ -11,12 +11,14 @@ export class EventListComponent implements OnInit {
 
   constructor(private eventService: EventService, private router: Router) { }
 
-  events : Event[]
+  events : []
   
 
   ngOnInit() {
     this.eventService.getAllEvents().subscribe(
-      (val: Event[]) => this.events = val);
+      (val: []) => {
+        return this.events = val;
+      });
     }
 
   eventInfo() { 

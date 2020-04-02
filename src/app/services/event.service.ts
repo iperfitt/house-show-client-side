@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import { Event } from 'src/app/models/event';
 import { environment } from 'src/environments/environment';
 
 
@@ -14,7 +13,6 @@ export class EventService {
   baseUrl = environment.baseUrl;
 
   getAllEvents() {
-    console.log(this.baseUrl);
     return this.http.get(this.baseUrl + '/allevents');
   }
 

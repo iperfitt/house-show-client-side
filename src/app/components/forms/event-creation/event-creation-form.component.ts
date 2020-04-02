@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Event } from 'src/app/models/event';
 import { EventService } from 'src/app/services/event.service';
-import { EventAddress } from 'src/app/models/eventaddress';
 
 
 @Component({
