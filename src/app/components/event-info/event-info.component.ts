@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StateService } from 'src/app/services/state-service.service';
 
 @Component({
   selector: 'app-event-info',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventInfoComponent implements OnInit {
 
-  constructor(){ }
+  constructor(private stateService: StateService){ }
 
-  ngOnInit() {} 
+  ngOnInit() {
+    console.log(this.stateService.data);
+  } 
 
 }
