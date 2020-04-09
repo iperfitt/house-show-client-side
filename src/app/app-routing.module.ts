@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full',redirectTo: 'allevents'},
   { path: 'allevents', component: EventListComponent },
   { path: 'createevent', component: CreateEventComponent },
-  { path: 'eventinfo', component: EventInfoComponent } 
+  { path: 'eventinfo', component: EventInfoComponent, data : {some_data : 'some_value'} } 
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../services/event.service';
 import { Router } from '@angular/router';
+import { StateService } from 'src/app/services/state-service.service';
 
 @Component({
   selector: 'event-list',
@@ -9,11 +10,10 @@ import { Router } from '@angular/router';
 })
 export class EventListComponent implements OnInit {
 
-  constructor(private eventService: EventService, private router: Router) { }
+  constructor(private eventService: EventService, private router: Router, private stateService: StateService) { }
 
   events : []
   
-
   ngOnInit() {
     this.eventService.getAllEvents().subscribe(
       (val: []) => {
@@ -22,10 +22,11 @@ export class EventListComponent implements OnInit {
     }
 
   eventInfo() { 
-    this.router.navigate(['/eventinfo'])
-      .then(success => console.log('navigation success?' , success))
+
+    this.stateService.data = {};
+        this.router.navigate(['/eventinfo'])
+        .then(success => console.log('navigation success?' , success))
       .catch(console.error); 
   } 
-
 } 
 

@@ -7,12 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(){ }
 
-  public address : string;
-  public latitude : string;
-  public longitude : string;
-  ngOnInit() {
-  }
+  ngOnInit() {} 
 
 }
