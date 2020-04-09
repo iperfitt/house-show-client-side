@@ -11,9 +11,10 @@ export class EventCreationFormComponent {
 
   event = {
     "eventId" : 0,
-    "eventName" : "sadfasdf",
-    "eventAddress": "asadfasdf",
-    "eventGenre": "asdfasdf"
+    "eventName" : "",
+    "eventAddress": "",
+    "eventGenre": "",
+    "eventType": ""
   } 
 
   constructor(private eventService: EventService) { }
