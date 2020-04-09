@@ -21,11 +21,12 @@ export class EventListComponent implements OnInit {
       });
     }
 
-  eventInfo() { 
-    this.stateService.data = {waggo : 'denniso'};
+  eventInfo(event : Event) { 
+    this.stateService.data = event;
     this.router.navigate(['/eventinfo'])
       .then(success => console.log('navigation success?' , success))
       .catch(console.error); 
   } 
+
 } 
 
