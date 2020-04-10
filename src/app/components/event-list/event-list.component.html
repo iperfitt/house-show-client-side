@@ -5,7 +5,7 @@
 <div class="formgroup">
   <label for="cityfilter">Filter By City</label>
   <br>
-  <input type="text"id="cityfilter" required [(ngModel)]="cityFilterArgs.city" name = "cityfilter">
+  <input type="text"id="cityfilter" required [(ngModel)]="listFilter" name = "cityfilter">
 </div>
 
 <table>
@@ -16,7 +16,7 @@
           <th>Event Type</th>
           <th></th>
         </tr>
-        <tr class= "eventListRow" *ngFor="let event of events | cityfilter:cityFilterArgs" >
+        <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
             <td> {{event.eventName}} </td>
             <td> {{event.eventAddress.city}} </td>
             <td> {{event.eventGenre}}</td>
