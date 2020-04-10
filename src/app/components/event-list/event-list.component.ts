@@ -12,12 +12,33 @@ export class EventListComponent implements OnInit {
 
   constructor(private eventService: EventService, private router: Router, private stateService: StateService) { }
 
-  events : []
+  events : any[]
+  filteredEvents : any[]
+
+  private _listFilter: string;
+
+  public get listFilter(): string {
+    return this._listFilter;
+  }
+  
+  public set listFilter(value: string) {
+      this._listFilter = value;
+      this.filteredEvents = this._listFilter ? this.performFilter(this._listFilter) : this.events;
+  }
+
+  performFilter(filterBy: string): any[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    console.log(this.events.filter((event: any) =>
+          event.eventAddress.city.toLowerCase().indexOf(filterBy) !== -1));
+    return this.events.filter((event: any) =>
+    event.eventAddress.city.toLowerCase().indexOf(filterBy) !== -1)
+}
   
   ngOnInit() {
     this.eventService.getAllEvents().subscribe(
       (val: []) => {
-        return this.events = val;
+        this.events = val;
+        this.filteredEvents = this.events;
       });
     }
 

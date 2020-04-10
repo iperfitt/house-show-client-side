@@ -2,6 +2,12 @@
     Please see local event listings below:
 </body>
 
+<div class="formgroup">
+  <label for="cityfilter">Filter By City</label>
+  <br>
+  <input type="text"id="cityfilter" required [(ngModel)]="listFilter" name = "cityfilter">
+</div>
+
 <table>
         <tr>
           <th>Name:</th>
@@ -10,7 +16,7 @@
           <th>Event Type</th>
           <th></th>
         </tr>
-        <tr class= "eventListRow" *ngFor="let event of events" >
+        <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
             <td> {{event.eventName}} </td>
             <td> {{event.eventAddress.city}} </td>
             <td> {{event.eventGenre}}</td>
@@ -18,6 +24,5 @@
 
             <button (click)="eventInfo(event)">More Info</button> 
         </tr>
-</table> 
+</table>   
 
-<button (click)="eventInfo(event)">More Info</button> 
