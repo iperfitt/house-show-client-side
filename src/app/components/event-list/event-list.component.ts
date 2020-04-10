@@ -13,6 +13,8 @@ export class EventListComponent implements OnInit {
   constructor(private eventService: EventService, private router: Router, private stateService: StateService) { }
 
   events : []
+
+  cityFilterArgs = {city: ''}
   
   ngOnInit() {
     this.eventService.getAllEvents().subscribe(
