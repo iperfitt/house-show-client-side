@@ -2,10 +2,22 @@
     Please see local event listings below:
 </body>
 
-<div class="formgroup">
+<div>
+  <label for="namefilter">Filter By Name</label>
+  <br>
+  <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter">
+  <br>
+  <label for="genrefilter">Filter By Genre</label>
+  <br>
+  <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter">
+  <br>
   <label for="cityfilter">Filter By City</label>
   <br>
-  <input type="text"id="cityfilter" required [(ngModel)]="listFilter" name = "cityfilter">
+  <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter">
+  <br>
+  <label for="typefilter">Filter By Type</label>
+  <br>
+  <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter">
 </div>
 
 <table>
