@@ -8,7 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { EventCreationFormComponent } from './components/forms/event-creation/event-creation-form.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { EventInfoComponent } from './components/event-info/event-info.component';
-import { CookieService } from 'ngx-cookie-service';
 import { GooglePlacesComponent } from './components/google-places/google-places.component';
 import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
@@ -35,7 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
       libraries: ['places']
     })
   ],
-  providers: [CookieService],
+  providers: [],
   bootstrap: [AppComponent, ]
 })
 export class AppModule { }

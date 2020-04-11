@@ -1,12 +1,18 @@
-<h1>{{ title }}
-</h1>
-<body>
-<div class="nav">
-    <a routerLink="/allevents">View All Events</a>
-    <a routerLink="/createevent">Create An Event</a>
-</div>
+<body> 
+    <ul class="nav justify-content-center _nav">
+        <li class="nav-item">
+            <a >DIY Event App</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link2" routerLink="/allevents">View All Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link3" routerLink="/createevent">Create Event</a>
+        </li>
+      </ul>
 <router-outlet></router-outlet>
 <br>
 
 <app-footer id="footer"></app-footer>
 </body>
+
