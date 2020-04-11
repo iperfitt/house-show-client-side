@@ -13,6 +13,7 @@ import { GooglePlacesComponent } from './components/google-places/google-places.
 import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { CityfilterPipe } from './pipes/cityfilter.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CityfilterPipe } from './pipes/cityfilter.pipe';
     EventCreationFormComponent,
     EventInfoComponent,
     GooglePlacesComponent,
-    CityfilterPipe
+    CityfilterPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
