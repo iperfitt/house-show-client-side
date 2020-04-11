@@ -1,22 +1,14 @@
 <body>
-    Please see local event listings below:
-</body>
+   <h1> Please see local event listings below:</h1> 
 
-<div>
-  <label for="namefilter">Filter By Name</label>
-  <br>
+<div id="filterInputs">
+  <label>Filter By Name</label>
   <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter">
-  <br>
-  <label for="genrefilter">Filter By Genre</label>
-  <br>
+  <label>Filter By Genre</label>
   <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter">
-  <br>
-  <label for="cityfilter">Filter By City</label>
-  <br>
+  <label>Filter By City</label>
   <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter">
-  <br>
-  <label for="typefilter">Filter By Type</label>
-  <br>
+  <label>Filter By Type</label>
   <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter">
 </div>
 
@@ -37,4 +29,6 @@
             <button (click)="eventInfo(event)">More Info</button> 
         </tr>
 </table>   
+
+</body>
 
