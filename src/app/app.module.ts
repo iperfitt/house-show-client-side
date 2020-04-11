@@ -12,7 +12,6 @@ import { CookieService } from 'ngx-cookie-service';
 import { GooglePlacesComponent } from './components/google-places/google-places.component';
 import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
-import { CityfilterPipe } from './pipes/cityfilter.pipe';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { FooterComponent } from './components/footer/footer.component';
     EventCreationFormComponent,
     EventInfoComponent,
     GooglePlacesComponent,
-    CityfilterPipe,
     FooterComponent
   ],
   imports: [
