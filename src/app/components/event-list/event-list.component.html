@@ -1,15 +1,18 @@
 <body>
-   <h1> Please see local event listings below:</h1> 
+   <h1> Upcoming Events</h1> 
 
 <div id="filterInputs">
   <label>Filter By Name</label>
-  <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter">
+  <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter" size="10">
+  <br>
   <label>Filter By Genre</label>
-  <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter">
+  <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter" size="10">
+  <br>
   <label>Filter By City</label>
-  <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter">
+  <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter" size="10">
+  <br>
   <label>Filter By Type</label>
-  <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter">
+  <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter" size="10">
 </div>
 
 <table>

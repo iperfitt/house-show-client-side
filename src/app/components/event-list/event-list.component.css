@@ -3,41 +3,50 @@ body {
   padding-left: 5px;
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: whitesmoke;
+  min-height: 100vh;
+}
+
+input {
+  height: 20px;
 }
 
 label {
-  font-size: 20px;
+  font-size: 12px;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 15px;
 }
 
-  button {
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-  }
+button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
 
-  table {
-    margin-left:auto; 
-    margin-right:auto;
-    border: 3px solid black;
-    align-content: center;
-    width: 50%;
-  }
+table {
+  margin-left:auto; 
+  margin-right:auto;
+  border: 3px solid black;
+  align-content: center;
+  width: 50%;
+  float: right;
+}
 
-  td, th {
-    padding-left: 5px;
-  }
+td, th {
+  padding-left: 5px;
+}
 
-  .eventListRow {
-    border: 3px solid black;
-    height: 40px;
-  }
+.eventListRow {
+  border: 3px solid black;
+  height: 40px;
+}
 
-  #filterInputs {
-    align-content: center;
-  }
+#filterInputs {
+  align-content: center;
+  size: 10px;
+  float: left;
+}
 
 

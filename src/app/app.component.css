@@ -1,33 +1,33 @@
-  ._nav {
-    background-color: black;
+._nav {
+    background-color: #333333;
     font-family: helvetica;
-  }
+}
+
 img {
   align-content: auto;
 }
 
 ._nav a {
-    color: whitesmoke;
-    background-color: black;
+    color: lightgrey;
+    background-color: #333333;
 }
 
 ._nav a.nav-link2:hover {
-  color: green;
-  background-color: black;
+  color: whitesmoke;
+  background-color: #333333;
 } 
 ._nav a.nav-link3:hover {
-  color: blue;
-  background-color: black;
+  color: whitesmoke;
+  background-color: #333333;
 } 
 
 #footer {
-  background-color: black;
+  background-color: #333333;
   color: white;
   position: absolute;
   bottom: 0;
   height: 100px;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
-  padding: 20px;
   
 }
