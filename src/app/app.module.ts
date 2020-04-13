@@ -12,6 +12,7 @@ import { GooglePlacesComponent } from './components/google-places/google-places.
 import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     EventCreationFormComponent,
     EventInfoComponent,
     GooglePlacesComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

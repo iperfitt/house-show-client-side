@@ -8,11 +8,9 @@ body {
 }
 
 input {
-  height: 20px;
-}
-
-label {
-  font-size: 12px;
+  height: 30px;
+  font-size: 20px;
+  width: 200px;
 }
 
 h1 {
