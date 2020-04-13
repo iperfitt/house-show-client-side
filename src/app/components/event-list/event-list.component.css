@@ -1,22 +1,16 @@
 body {
-  font-size: 25px;
+  font-size: 12px;
   background-color: whitesmoke;
   min-height: 100vh;
   font-family: helvetica;
 }
-
 
 .input-group {
   width: 500px;
   padding-top: 40px;
   margin: auto;
   display: block;
-}
-
-th {
-font-size: 15px;
-text-align: center;
-background-color: red;
+  padding-bottom: 75px;
 }
 
 input {
@@ -25,10 +19,19 @@ input {
   width: 200px;
 }
 
+.thead {
+ background-color: #333333;
+ color: whitesmoke;
+}
+
 button {
-  background-color: black;
-  color: white;
+  background-color: #333333;
+  color: whitesmoke;
   border-radius: 5px;
+}
+
+button:hover{
+  color:grey;
 }
 
 td{
@@ -37,7 +40,6 @@ td{
 }
 
 .eventListRow {
-  border: 3px solid black;
   height: 40px;
 }
 

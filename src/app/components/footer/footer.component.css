@@ -1,4 +1,5 @@
 table {
     align-content: center;
-   
+    width: 75%;
+    position: fixed;
 }

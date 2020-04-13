@@ -1,3 +1,7 @@
+body {
+  margin-bottom: 50px;
+}
+
 ._nav {
     background-color: #333333;
     font-family: helvetica;
@@ -24,8 +28,9 @@ img {
 #footer {
   background-color: #333333;
   color: white;
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 0px;
   height: 100px;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
