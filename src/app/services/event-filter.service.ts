@@ -7,27 +7,28 @@ export class EventFilterService {
 
   constructor() { }
 
-filterCity(filterBy: string, events: any[]): any[] {
+filterEvents(filterBy: string, events: any[]): any[] {
+  let filterArr : string[];
   filterBy = filterBy.toLocaleLowerCase();
-  return (events.filter((event: any) =>
-  event.eventAddress.city.toLowerCase().indexOf(filterBy) !== -1));
-}
-
-filterType(filterBy: string, events: any[]): any[] {
-  filterBy = filterBy.toLocaleLowerCase();
-  return (events.filter((event: any) =>
-  event.eventType.toLowerCase().indexOf(filterBy) !== -1));
-}
-
-filterName(filterBy: string, events: any[]): any[] {
-  filterBy = filterBy.toLocaleLowerCase();
-  return (events.filter((event: any) =>
-  event.eventName.toLowerCase().indexOf(filterBy) !== -1));
-}
-
-filterGenre(filterBy: string, events: any[]): any[] {
-filterBy = filterBy.toLocaleLowerCase();
-return (events.filter((event: any) =>
-event.eventGenre.toLowerCase().indexOf(filterBy) !== -1));
+  filterArr = filterBy.split(" ");
+  for (let i = 0; i < filterArr.length; i++) {
+    events = events.filter((event: any) => {
+      if (event.eventName.toLowerCase().indexOf(filterArr[i]) !== -1) {
+        return true;
+      }
+      if (event.eventAddress.city.toLowerCase().indexOf(filterArr[i]) !== -1) {
+        return true;
+      }
+      if (event.eventGenre.toLowerCase().indexOf(filterArr[i]) !== -1) {
+        return true;
+      }
+      if (event.eventType.toLowerCase().indexOf(filterArr[i]) !== -1) {
+        return true;
+      }
+      return false;
+    }
+    );
+  }
+  return events;
 }
 }

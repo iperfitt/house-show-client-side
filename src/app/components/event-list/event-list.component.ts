@@ -22,36 +22,12 @@ export class EventListComponent implements OnInit {
 
   filteredEvents : any[]
 
-  private _cityFilter: string;
+  private _eventFilter: string;
 
-  private _typeFilter: string;
-
-  private _nameFilter: string;
-
-  private _genreFilter: string;
-  
-  public set nameFilter(value: string) {
-      this._nameFilter = value;
-      this.filteredEvents = this._nameFilter ? 
-      this.eventFilterService.filterName(this._nameFilter, this.events) : this.events;
-  }
-
-  public set genreFilter(value: string) {
-    this._genreFilter = value;
-    this.filteredEvents = this._genreFilter ? 
-    this.eventFilterService.filterGenre(this._genreFilter, this.events) : this.events;
-}
-
-  public set cityFilter(value: string) {
-    this._cityFilter = value;
-    this.filteredEvents = this._cityFilter ? 
-    this.eventFilterService.filterCity(this._cityFilter, this.events) : this.events;
-}
-
-  public set typeFilter(value: string) {
-    this._typeFilter = value;
-    this.filteredEvents = this._typeFilter ? 
-    this.eventFilterService.filterType(this._typeFilter, this.events) : this.events;
+  public set eventFilter(value: string) {
+    this._eventFilter = value;
+    this.filteredEvents = this._eventFilter ? 
+    this.eventFilterService.filterEvents(this._eventFilter, this.events) : this.events;
 }
   
   ngOnInit() {

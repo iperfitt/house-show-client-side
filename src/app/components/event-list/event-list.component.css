@@ -1,10 +1,22 @@
 body {
   font-size: 25px;
-  padding-left: 5px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   background-color: whitesmoke;
   min-height: 100vh;
+  font-family: helvetica;
+}
+
+
+.input-group {
+  width: 500px;
+  padding-top: 40px;
+  margin: auto;
+  display: block;
+}
+
+th {
+font-size: 15px;
+text-align: center;
+background-color: red;
 }
 
 input {
@@ -13,27 +25,15 @@ input {
   width: 200px;
 }
 
-h1 {
-  font-size: 15px;
-}
-
 button {
   background-color: black;
   color: white;
   border-radius: 5px;
 }
 
-table {
-  margin-left:auto; 
-  margin-right:auto;
-  border: 3px solid black;
-  align-content: center;
-  width: 50%;
-  float: right;
-}
-
-td, th {
+td{
   padding-left: 5px;
+  font-size :15px;
 }
 
 .eventListRow {
@@ -45,6 +45,9 @@ td, th {
   align-content: center;
   size: 10px;
   float: left;
+  padding-left: 5px;
 }
+
+
 
 

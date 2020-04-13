@@ -1,33 +1,46 @@
 <body>
-   <h1> Upcoming Events</h1> 
 
-<div id="filterInputs">
-  <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter" size="10" placeholder="Select event name">
-  <br>
-  <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter" size="10" placeholder="Select genre">
-  <br>
-  <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter" size="10" placeholder="Select city">
-  <br>
-  <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter" size="10" placeholder="Select event type">
-</div>
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">
+        <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"/>
+          <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"/>
+        </svg>
+      </span>
+    </div>
+    <input type="text" required [(ngModel)]="eventFilter" name="eventFilter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search by event name, city, genre, or type">
+  </div>
 
-<table>
-        <tr>
-          <th>Name:</th>
-          <th>City:</th>
-          <th>Genre:</th>
-          <th>Event Type</th>
-          <th></th>
-        </tr>
-        <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
-            <td> {{event.eventName}} </td>
-            <td> {{event.eventAddress.city}} </td>
-            <td> {{event.eventGenre}}</td>
-            <td> {{event.eventType}}</td>
-
-            <button (click)="eventInfo(event)">More Info</button> 
-        </tr>
-</table>   
+  <!-- <div id="filterInputs">
+    <input type="text"id="namefilter" required [(ngModel)]="nameFilter" name = "namefilter" size="10" placeholder="Select event name">
+    <br>
+    <input type="text"id="genrefilter" required [(ngModel)]="genreFilter" name = "genrefilter" size="10" placeholder="Select genre">
+    <br>
+    <input type="text"id="cityfilter" required [(ngModel)]="cityFilter" name = "cityfilter" size="10" placeholder="Select city">
+    <br>
+    <input type="text"id="typefilter" required [(ngModel)]="typeFilter" name = "typefilter" size="10" placeholder="Select event type">
+  </div> -->
+  <table class="table">
+    <thead class = "thead-dark">
+          <tr>
+            <th scope="col">Name:</th>
+            <th scope="col">City:</th>
+            <th scope="col">Genre:</th>
+            <th scope="col">Type:</th>
+            <th scope="col"></th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
+              <td> {{event.eventName}} </td>
+              <td> {{event.eventAddress.city}} </td>
+              <td> {{event.eventGenre}}</td>
+              <td> {{event.eventType}}</td>
+              <button (click)="eventInfo(event)">More Info</button> 
+          </tr>
+        </tbody>
+  </table>   
 
 </body>
 
