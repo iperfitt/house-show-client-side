@@ -1,26 +1,32 @@
 <body>
   <div class="input-group input-group-lg">
-    <input type="text" required [(ngModel)]="eventFilter" name="eventFilter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Search by event name, city, genre, or type">
+    
+    <input type="text" required [(ngModel)]="eventFilter" name="eventFilter" class="form-control" placeholder="Search by event name, city, genre, or type">
   </div>
-  <table class="table">
-    <thead class="thead">
-      <tr>
-        <th scope="col">Name:</th>
-        <th scope="col">City:</th>
-        <th scope="col">Genre:</th>
-        <th scope="col">Type:</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
-          <td> {{event.eventName}} </td>
-          <td> {{event.eventAddress.city}} </td>
-          <td> {{event.eventGenre}}</td>
-          <td> {{event.eventType}}</td>
-          <button type="button" class="btn btn-dark" (click)="eventInfo(event)">More Info</button> 
-      </tr>
-    </tbody>
-  </table>   
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name:</th>
+          <th scope="col">City:</th>
+          <th scope="col">Genre:</th>
+          <th scope="col">Type:</th>
+          <th scope="col">More Info:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class= "eventListRow" *ngFor="let event of filteredEvents" >
+            <td> {{event.eventName}} </td>
+            <td> {{event.eventAddress.city}} </td>
+            <td> {{event.eventGenre}}</td>
+            <td> {{event.eventType}}</td>
+            <td>
+              <button type="button" class="btn btn-dark" (click)="eventInfo(event)">More Info</button> 
+            </td>
+            
+        </tr>
+      </tbody>
+    </table>   
+  </div>
 </body>
 

@@ -1,7 +1,8 @@
 body {
   font-size: 12px;
   background-color: whitesmoke;
-  min-height: 100vh;
+  margin: 0;
+  height: 100%;
   font-family: helvetica;
 }
 
@@ -19,15 +20,54 @@ input {
   width: 200px;
 }
 
-.thead {
- background-color: #333333;
- color: whitesmoke;
+.form-control:focus{
+  border-color: white !important;
+  -webkit-box-shadow: white !important;
+  box-shadow: 0px 0px 3px 3px white !important;
+}
+
+.table-container {
+  height: 34em;
+}
+
+table, thead {
+  flex: 0 0 auto;
+  width: calc(100% - 0.9em);
+}
+
+table tbody {
+  /* body takes all the remaining available space */
+  flex: 1 1 auto;
+  display: block;
+  overflow-y: scroll;
+}
+table tbody tr {
+  width: 100%;
+}
+
+table thead, table tbody tr {
+  display: table;
+  table-layout: fixed;
+}
+
+table {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+thead {
+  background-color: #333333;
+  color: whitesmoke;
 }
 
 button {
   background-color: #333333;
   color: whitesmoke;
   border-radius: 5px;
+  width: 90px;
+  height: 40px;
 }
 
 button:hover{
@@ -36,7 +76,8 @@ button:hover{
 
 td{
   padding-left: 5px;
-  font-size :15px;
+  font-size: 15px;
+  background-color: whitesmoke;
 }
 
 .eventListRow {
