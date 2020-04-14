@@ -29,5 +29,6 @@ export class EventCreationFormComponent {
     if(selected) {  
      this.event.eventAddress = selected;
     }
+    
   }
 }

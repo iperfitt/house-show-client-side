@@ -1,35 +1,5 @@
 
 <body>
-
-
-<!-- <div class="container">
-    <form (ngSubmit)="submitEvent()" #eventForm="ngForm" class="eventForm">
-      <div class="formgroup">
-            <label for="name">Name</label>
-            <br>
-            <input type="text"id="name" required [(ngModel)]="event.eventName" name = "name">
-        </div>
-        <div class="formgroup">
-          <label for="type">Type</label>
-          <br>
-          <input type="text"id="type" required [(ngModel)]="event.eventType" name = "type">
-      </div>
-        <div class="formgroup">
-          <label for="location">Location</label>
-          <br>
-          <app-google-places (outputToParent) = "getOutputVal($event)"></app-google-places>
-        </div>
-      <div class="formgroup">
-            <label for="genre">Genre</label>
-            <br>
-            <input type="text"id="genre" required [(ngModel)]="event.eventGenre" name = "genre">
-      </div>
-        <div class="buttoncontainer">
-        <button type="submit" class="button">Create Event</button>
-        </div>
-    </form> 
-  </div> -->
-
   <form (ngSubmit)="submitEvent()" #eventForm="ngForm" class="eventForm"> 
     <div class="form-group">
       <label for="name">Name</label>

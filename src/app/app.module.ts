@@ -14,6 +14,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     GooglePlacesComponent,
     FooterComponent,
     AboutComponent,
-    ProfileComponent
+    ProfileComponent,
+    ImageUploadComponent
   ],
   imports: [
     BrowserModule,
