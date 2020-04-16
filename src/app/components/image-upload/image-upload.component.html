@@ -1,17 +1,10 @@
-<h3>Upload Event Poster</h3>
-
-
+<h3>
+    Upload Event Poster
+</h3>
 <div>
     <input type="file" (change)="onFileChanged($event)">
-
     <img [src]="imgURL" height="200" *ngIf="imgURL">
 </div>
-
-<input type="button" (click)="onUpload()" value="upload">
-
-<hr />
-
 Received Image:
-
-{{ receivedImageData['pic'] | json}}
+<!-- {{ receivedImageData['pic'] | json}} -->
 <img [src]="convertedImage" >

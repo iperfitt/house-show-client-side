@@ -1,4 +1,3 @@
-
 <body>
   <form (ngSubmit)="submitEvent()" #eventForm="ngForm" class="eventForm"> 
     <div class="form-group">
@@ -11,14 +10,17 @@
     </div>
     <div class="form-group">
       <label for="type">Location</label>
-      <app-google-places (outputToParent) = "getOutputVal($event)"></app-google-places>
+      <app-google-places (outputToParent)="getAddressOutputVal($event)"></app-google-places>
     </div>
     <div class="form-group">
       <label for="type">Genre</label>
       <input type="text" id="genre" required [(ngModel)]="event.eventGenre" class="form-control" placeholder="Enter event genre" name="genre">
     </div>
-    <div class="buttoncontainer">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group img-upload">
+      <app-image-upload (outputToParent)="getFlyerOutputVal($event)"></app-image-upload>
     </div>
+    <div class="buttoncontainer">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
   </form>
 </body>

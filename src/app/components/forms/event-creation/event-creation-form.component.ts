@@ -14,21 +14,35 @@ export class EventCreationFormComponent {
     "eventName" : "",
     "eventAddress": "",
     "eventGenre": "",
-    "eventType": ""
+    "eventType": "",
+    "eventFlyer" : null
   } 
 
   constructor(private eventService: EventService) { }
 
   submitEvent() {
-    console.log(this.event);
     this.eventService.submitEvent(this.event).subscribe(
-    (val: any) => console.log(val)); 
+      res => {
+        console.log(res);
+        // this.receivedImageData = res;
+        // this.base64Data = this.receivedImageData.pic;
+        // this.convertedImage = 'data:image/jpeg;base64,' + this.base64Data;
+      },
+        err => console.log('Error Occured duringng saving: ' + err)
+              );
   }
 
-  getOutputVal(selected: string) {
+  getAddressOutputVal(selected: string) {
     if(selected) {  
      this.event.eventAddress = selected;
     }
-    
+  }
+
+  getFlyerOutputVal(selected: any) {
+    if(selected) {  
+      const uploadData = new FormData();
+      uploadData.append('myFile', this.event.eventFlyer, this.event.eventFlyer.name);
+      this.event.eventFlyer = uploadData;
+    }
   }
 }
