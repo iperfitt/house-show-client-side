@@ -16,9 +16,9 @@ export class EventService {
     return this.http.get(this.baseUrl + '/allevents');
   }
 
-  submitEvent(event : any) {
-    let headers = new HttpHeaders({'Content-Type': 'application/json'});
-    let options = { headers: headers };
-    return this.http.post(this.baseUrl + '/createevent',event, options);
+  submitEvent(eventFlyer: any) {
+    // let headers = new HttpHeaders({'Content-Type': 'application/json'});
+    // let options = { headers: headers };
+    return this.http.post(this.baseUrl + '/createevent',eventFlyer);
   }
 }

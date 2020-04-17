@@ -20,7 +20,6 @@ export class ImageUploadComponent {
   convertedImage: any;
 
   public onFileChanged(event) {
-    console.log("file changed" + event);
     this.selectedFile = event.target.files[0];
     let reader = new FileReader();
     reader.readAsDataURL(event.target.files[0]);

@@ -9,19 +9,20 @@ import { EventService } from 'src/app/services/event.service';
 })
 export class EventCreationFormComponent {
 
+  eventFlyer: any
+
   event = {
     "eventId" : 0,
     "eventName" : "",
     "eventAddress": "",
     "eventGenre": "",
-    "eventType": "",
-    "eventFlyer" : null
+    "eventType": ""
   } 
 
   constructor(private eventService: EventService) { }
 
   submitEvent() {
-    this.eventService.submitEvent(this.event).subscribe(
+    this.eventService.submitEvent(this.eventFlyer).subscribe(
       res => {
         console.log(res);
         // this.receivedImageData = res;
@@ -38,11 +39,11 @@ export class EventCreationFormComponent {
     }
   }
 
-  getFlyerOutputVal(selected: any) {
-    if(selected) {  
+  getFlyerOutputVal(selectedFile: any) {
+    if(selectedFile) {  
       const uploadData = new FormData();
-      uploadData.append('myFile', this.event.eventFlyer, this.event.eventFlyer.name);
-      this.event.eventFlyer = uploadData;
+      uploadData.append('myFile', selectedFile, selectedFile.name);
+      this.eventFlyer = uploadData;
     }
   }
 }
