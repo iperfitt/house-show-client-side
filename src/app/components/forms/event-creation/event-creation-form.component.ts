@@ -9,8 +9,6 @@ import { EventService } from 'src/app/services/event.service';
 })
 export class EventCreationFormComponent {
 
-  eventFlyer: any
-
   event = {
     "eventId" : 0,
     "eventName" : "",
@@ -18,6 +16,8 @@ export class EventCreationFormComponent {
     "eventGenre": "",
     "eventType": ""
   } 
+
+  eventFlyer : any
 
   constructor(private eventService: EventService) { }
 
