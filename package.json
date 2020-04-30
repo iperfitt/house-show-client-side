@@ -29,7 +29,7 @@
     "angular-oauth2-oidc": "^8.0.4",
     "bootstrap": "^3.4.1",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-cookie-service": "^2.3.0",
     "ngx-google-places-autocomplete": "^2.0.4",
     "path": "^0.12.7",
